@@ -21,7 +21,7 @@ const config = {
         loader: 'babel-loader'
       }
     }, {
-      test: /\.scss$/,
+      test: /\.css$/,
       use: ExtractTextPlugin.extract({
         fallback: {
           loader: 'style-loader',

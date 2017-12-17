@@ -25,5 +25,8 @@
     "ignore": [
       "dist/"
     ]
+  },
+  "dependencies": {
+    "ouyo": "^0.5.0"
   }
 }
