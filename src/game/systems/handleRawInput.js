@@ -29,9 +29,15 @@ window.addEventListener('keyup', function (e) {
 
 export const handleRawInput = {
   process (entities, event, game) {
-    const direction = inputMap.left
-      ? -1
-      : inputMap.right ? 1 : 0
+    const left = inputMap.left
+    const right = inputMap.right
+
+    let direction = 0
+    if (left && !right) {
+      direction = -1
+    } else if (!left && right) {
+      direction = 1
+    }
 
     game.emit({
       type: 'move',
