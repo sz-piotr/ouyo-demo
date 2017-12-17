@@ -1,3 +1,14 @@
-import { game } from './game'
+import { MovementSystem } from './systems/movement'
+import { ClearScreenSystem } from './systems/clearscreen'
+import { RenderSystem } from './systems/render'
 
-console.log(game)
+import { game } from './game'
+import { init } from './init'
+
+game.registerSystems([
+  MovementSystem,
+  ClearScreenSystem,
+  RenderSystem
+])
+
+game.start(init)
