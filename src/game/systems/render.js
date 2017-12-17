@@ -8,6 +8,10 @@ export const render = {
     const transform = entity.get(Transform)
 
     ctx.fillStyle = 'white'
-    ctx.fillRect(transform.x - 10, transform.y - 10, 20, 20)
+    drawSquare(transform.x, transform.y, transform.size)
   }
+}
+
+function drawSquare (x, y, size) {
+  ctx.fillRect(x - size / 2, y - size / 2, size, size)
 }

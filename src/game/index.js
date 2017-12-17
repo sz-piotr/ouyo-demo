@@ -2,6 +2,8 @@ import { handleRawInput } from './systems/handleRawInput'
 import { setPlayerVelocity } from './systems/setPlayerVelocity'
 import { applyVelocity } from './systems/applyVelocity'
 import { limitPlayerPosition } from './systems/limitPlayerPosition'
+import { shootBullets } from './systems/shootBullets'
+import { removeBullets } from './systems/removeBullets'
 import { clearScreen } from './systems/clearScreen'
 import { render } from './systems/render'
 
@@ -13,6 +15,8 @@ game.registerSystems([
   setPlayerVelocity,
   applyVelocity,
   limitPlayerPosition,
+  shootBullets,
+  removeBullets,
   clearScreen,
   render
 ])
