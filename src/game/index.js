@@ -10,7 +10,10 @@ import { renderColor } from './systems/renderColor'
 import { renderSprite } from './systems/renderSprite'
 
 import { game } from './game'
+import { load } from './loader'
 import { init } from './init'
+
+import assets from './assets'
 
 game.registerSystems([
   handleRawInput,
@@ -25,4 +28,6 @@ game.registerSystems([
   renderSprite
 ])
 
-game.start(init)
+load(assets).then(() =>
+  game.start(init)
+)

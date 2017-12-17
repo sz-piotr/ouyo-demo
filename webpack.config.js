@@ -7,7 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const isProduction = process.env.npm_lifecycle_event === 'build'
 
 const config = {
-  entry: path.join(__dirname, 'src/index.js'),
+  entry: ['babel-polyfill', path.join(__dirname, 'src/index.js')],
   output: {
     filename: 'app.[chunkhash].js',
     path: path.join(__dirname, 'dist')
