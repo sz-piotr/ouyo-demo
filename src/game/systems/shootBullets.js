@@ -1,10 +1,9 @@
 import { Query } from 'ouyo'
 import {
   Cannon,
-  Transform,
-  Velocity,
-  Bullet
+  Transform
 } from '../components'
+import { bullet } from '../assemblages/bullet'
 
 export const shootBullets = {
   query: new Query(Cannon, Transform),
@@ -15,10 +14,7 @@ export const shootBullets = {
     cannon.timeLeft -= event.timeDelta
     if (cannon.timeLeft <= 0) {
       cannon.timeLeft = cannon.interval + cannon.timeLeft
-      game.createEntity()
-        .add(new Transform(transform.x, transform.y - transform.size, 10))
-        .add(new Velocity(0, -cannon.bulletSpeed))
-        .add(new Bullet())
+      bullet(game, transform, cannon.bulletSpeed)
     }
   }
 }
