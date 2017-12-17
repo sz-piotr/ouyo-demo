@@ -1,0 +1,29 @@
+{
+  "name": "ouyo-demo",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --progress",
+    "build": "rimraf dist && webpack -p --progress",
+    "lint": "standard"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.3.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "rimraf": "^2.6.2",
+    "standard": "^10.0.3",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "standard": {
+    "ignore": [
+      "dist/"
+    ]
+  }
+}
