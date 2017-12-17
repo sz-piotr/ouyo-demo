@@ -4,8 +4,10 @@ import { applyVelocity } from './systems/applyVelocity'
 import { limitPlayerPosition } from './systems/limitPlayerPosition'
 import { shootBullets } from './systems/shootBullets'
 import { removeBullets } from './systems/removeBullets'
+import { spawnEnemies } from './systems/spawnEnemies'
 import { clearScreen } from './systems/clearScreen'
-import { render } from './systems/render'
+import { renderColor } from './systems/renderColor'
+import { renderSprite } from './systems/renderSprite'
 
 import { game } from './game'
 import { init } from './init'
@@ -17,8 +19,10 @@ game.registerSystems([
   limitPlayerPosition,
   shootBullets,
   removeBullets,
+  spawnEnemies,
   clearScreen,
-  render
+  renderColor,
+  renderSprite
 ])
 
 game.start(init)
