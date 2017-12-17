@@ -14,7 +14,7 @@ export const shootBullets = {
     cannon.timeLeft -= event.timeDelta
     if (cannon.timeLeft <= 0) {
       cannon.timeLeft = cannon.interval + cannon.timeLeft
-      bullet(game, transform, cannon.bulletSpeed)
+      game.createEntity(bullet(transform, cannon.bulletSpeed))
     }
   }
 }
