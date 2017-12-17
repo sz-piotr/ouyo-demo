@@ -5,7 +5,7 @@ const PLAYER_SPEED = 300
 
 export const setPlayerVelocity = {
   query: new Query(Player, Velocity),
-  processEntity (entity, timeDelta, game) {
+  processEntity (entity, event, game) {
     const velocity = entity.get(Velocity)
     if (game.events.includes('moveleft')) {
       velocity.x = -PLAYER_SPEED

@@ -28,7 +28,7 @@ window.addEventListener('keyup', function (e) {
 })
 
 export const handleRawInput = {
-  process (entities, timeDelta, game) {
+  process (entities, event, game) {
     const left = inputMap.left
     const right = inputMap.right
 

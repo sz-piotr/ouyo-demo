@@ -4,7 +4,7 @@ import { ctx } from '../canvas'
 
 export const render = {
   query: new Query(Transform),
-  processEntity (entity, timeDelta) {
+  processEntity (entity) {
     const transform = entity.get(Transform)
 
     ctx.fillStyle = 'white'

@@ -6,7 +6,7 @@ import {
 
 export const removeBullets = {
   query: new Query(Bullet, Transform),
-  processEntity (entity, timeDelta, game) {
+  processEntity (entity, event, game) {
     const transform = entity.get(Transform)
 
     if (transform.y <= -100) {

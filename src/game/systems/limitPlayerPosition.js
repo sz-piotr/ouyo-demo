@@ -4,7 +4,7 @@ import { WIDTH } from '../canvas'
 
 export const limitPlayerPosition = {
   query: new Query(Player, Transform),
-  processEntity (entity, timeDelta, game) {
+  processEntity (entity, event, game) {
     const transform = entity.get(Transform)
     if (transform.x < 50) {
       transform.x = 50
