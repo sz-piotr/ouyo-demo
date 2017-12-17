@@ -1,7 +1,9 @@
-import { Transform, Velocity } from './components'
+import { Transform, Velocity, Player } from './components'
+import { WIDTH, HEIGHT } from './canvas'
 
 export function init (game) {
   game.createEntity()
-    .add(new Transform(50, 50))
-    .add(new Velocity(100, 40))
+    .add(new Transform(WIDTH / 2, HEIGHT - 50))
+    .add(new Velocity(0, 0))
+    .add(new Player())
 }

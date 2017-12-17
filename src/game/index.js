@@ -1,14 +1,20 @@
-import { MovementSystem } from './systems/movement'
-import { ClearScreenSystem } from './systems/clearscreen'
-import { RenderSystem } from './systems/render'
+import { handleRawInput } from './systems/handleRawInput'
+import { setPlayerVelocity } from './systems/setPlayerVelocity'
+import { applyVelocity } from './systems/applyVelocity'
+import { limitPlayerPosition } from './systems/limitPlayerPosition'
+import { clearScreen } from './systems/clearScreen'
+import { render } from './systems/render'
 
 import { game } from './game'
 import { init } from './init'
 
 game.registerSystems([
-  MovementSystem,
-  ClearScreenSystem,
-  RenderSystem
+  handleRawInput,
+  setPlayerVelocity,
+  applyVelocity,
+  limitPlayerPosition,
+  clearScreen,
+  render
 ])
 
 game.start(init)

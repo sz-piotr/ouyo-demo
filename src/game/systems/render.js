@@ -2,7 +2,7 @@ import { Query } from 'ouyo'
 import { Transform } from '../components'
 import { ctx } from '../canvas'
 
-export const RenderSystem = {
+export const render = {
   query: new Query(Transform),
   processEntity (entity, timeDelta) {
     const transform = entity.get(Transform)

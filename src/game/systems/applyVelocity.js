@@ -1,7 +1,7 @@
 import { Query } from 'ouyo'
 import { Transform, Velocity } from '../components'
 
-export const MovementSystem = {
+export const applyVelocity = {
   query: new Query(Transform, Velocity),
   processEntity (entity, timeDelta) {
     const transform = entity.get(Transform)
