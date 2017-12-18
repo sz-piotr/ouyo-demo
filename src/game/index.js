@@ -1,9 +1,8 @@
-import { handleRawInput } from './systems/handleRawInput'
-import { setPlayerVelocity } from './systems/setPlayerVelocity'
+import { handleInput } from './systems/handleInput'
 import { applyVelocity } from './systems/applyVelocity'
 import { limitPlayerPosition } from './systems/limitPlayerPosition'
 import { shootBullets } from './systems/shootBullets'
-import { removeBullets } from './systems/removeBullets'
+import { removeOOB } from './systems/removeOOB'
 import { spawnEnemies } from './systems/spawnEnemies'
 import { clearScreen } from './systems/clearScreen'
 import { renderColor } from './systems/renderColor'
@@ -16,12 +15,11 @@ import { init } from './init'
 import assets from './assets'
 
 game.registerSystems([
-  handleRawInput,
-  setPlayerVelocity,
+  handleInput,
   applyVelocity,
   limitPlayerPosition,
   shootBullets,
-  removeBullets,
+  removeOOB,
   spawnEnemies,
   clearScreen,
   renderColor,
