@@ -4,6 +4,7 @@ import { limitPlayerPosition } from './systems/limitPlayerPosition'
 import { shootBullets } from './systems/shootBullets'
 import { removeOOB } from './systems/removeOOB'
 import { spawnEnemies } from './systems/spawnEnemies'
+import { damageEnemies } from './systems/damageEnemies'
 import { clearScreen } from './systems/clearScreen'
 import { renderColor } from './systems/renderColor'
 import { renderSprite } from './systems/renderSprite'
@@ -21,6 +22,7 @@ game.registerSystems([
   shootBullets,
   removeOOB,
   spawnEnemies,
+  damageEnemies,
   clearScreen,
   renderColor,
   renderSprite
