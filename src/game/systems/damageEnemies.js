@@ -13,6 +13,7 @@ export const damageEnemies = {
         const bulletTransform = bullet.get(Transform)
         if (collide(enemyTransform, bulletTransform)) {
           game.removeEntity(enemy)
+          game.removeEntity(bullet)
           break
         }
       }
