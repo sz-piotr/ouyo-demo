@@ -1,5 +1,6 @@
 import { Query } from 'ouyo'
 import { Transform, Enemy, DamagesEnemies } from '../components'
+import { collide } from '../collision'
 
 export const damageEnemies = {
   query: [
@@ -33,12 +34,4 @@ export const damageEnemies = {
       }
     }
   }
-}
-
-const pow2 = a => a * a
-
-function collide (a, b) {
-  const minDistance = pow2((a.size + b.size) / 2)
-  const distance = pow2(a.x - b.x) + pow2(a.y - b.y)
-  return distance < minDistance
 }

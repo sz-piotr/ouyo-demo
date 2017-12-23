@@ -6,6 +6,8 @@ import { removeOOB } from './systems/removeOOB'
 import { spawnEnemies } from './systems/spawnEnemies'
 import { damageEnemies } from './systems/damageEnemies'
 import { spawnPowerups } from './systems/spawnPowerups'
+import { drainPowerups } from './systems/drainPowerups'
+import { consumePowerups } from './systems/consumePowerups'
 import { clearScreen } from './systems/clearScreen'
 import { renderColor } from './systems/renderColor'
 import { renderSprite } from './systems/renderSprite'
@@ -25,6 +27,8 @@ game.registerSystems([
   spawnEnemies,
   damageEnemies,
   spawnPowerups,
+  drainPowerups,
+  consumePowerups,
   clearScreen,
   renderColor,
   renderSprite
