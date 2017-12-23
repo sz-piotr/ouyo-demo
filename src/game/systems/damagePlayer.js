@@ -18,10 +18,10 @@ export const damagePlayer = {
 
       if (collide(enemyTransform, playerTransform)) {
         const playerComponent = player.get(Player)
-        player.add(new Invincible(2, null))
+        player.add(new Invincible(2))
         playerComponent.health -= 1
         if (playerComponent.health <= 0) {
-          // game.removeEntity(player)
+          game.removeEntity(player)
         }
       }
     }

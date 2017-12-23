@@ -1,4 +1,4 @@
-import { ctx, WIDTH, HEIGHT } from '../canvas'
+import { ctx, WIDTH, HEIGHT } from '../../canvas'
 
 export const clearScreen = {
   process () {

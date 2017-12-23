@@ -9,9 +9,7 @@ import { damagePlayer } from './systems/damagePlayer'
 import { spawnPowerups } from './systems/spawnPowerups'
 import { drainPowerups } from './systems/drainPowerups'
 import { consumePowerups } from './systems/consumePowerups'
-import { clearScreen } from './systems/clearScreen'
-import { renderColor } from './systems/renderColor'
-import { renderSprite } from './systems/renderSprite'
+import rendering from './systems/rendering'
 
 import { game } from './game'
 import { load } from './loader'
@@ -31,9 +29,7 @@ game.registerSystems([
   spawnPowerups,
   drainPowerups,
   consumePowerups,
-  clearScreen,
-  renderColor,
-  renderSprite
+  ...rendering
 ])
 
 load(assets).then(() =>

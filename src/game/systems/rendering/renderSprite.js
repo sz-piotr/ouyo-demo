@@ -1,6 +1,6 @@
 import { Query } from 'ouyo'
-import { Transform, Sprite, Rotation, Invincible } from '../components'
-import { ctx } from '../canvas'
+import { Transform, Sprite, Rotation, Invincible } from '../../components'
+import { ctx } from '../../canvas'
 
 export const renderSprite = {
   query: new Query(Transform, Sprite),

@@ -19,6 +19,8 @@ export const damageEnemies = {
           const { damage } = bullet.get(DamagesEnemies)
           game.removeEntity(bullet)
 
+          game.emit({ type: 'enemydamaged', damage })
+
           enemyHealth.health -= damage
           if (enemyHealth.health <= 0) {
             game.removeEntity(enemy)

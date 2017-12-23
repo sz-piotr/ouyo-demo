@@ -18,6 +18,9 @@ export const consumePowerups = {
     new Query(Transform, ThreeWayPowerup)
   ],
   process ([ player, ddPowerups, twPowerups ], event, game) {
+    if (!player) {
+      return
+    }
     processPowerups(player, ddPowerups, DoubleDamage, game)
     processPowerups(player, twPowerups, ThreeWay, game)
   }
