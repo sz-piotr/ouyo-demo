@@ -13,5 +13,5 @@ export function init (game) {
     .add(new Velocity(0, 0))
     .add(new Player())
     .add(getSprite('player.png'))
-    .add(new Cannon(0.1, 0, 450))
+    .add(new Cannon(0.2, 0, 450))
 }
