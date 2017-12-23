@@ -23,6 +23,7 @@ export const damagePlayer = {
         if (playerComponent.health <= 0) {
           game.removeEntity(player)
         }
+        return
       }
     }
   }

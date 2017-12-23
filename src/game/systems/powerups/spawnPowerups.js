@@ -1,6 +1,6 @@
 import { powerup } from '../../assemblages/powerup'
 
-const POWERUP_CHANCE = 0.3
+const POWERUP_CHANCE = 0.2
 
 export const spawnPowerups = {
   on: 'enemykilled',
