@@ -15,7 +15,6 @@ export const drainPowerups = {
 function drain (entities, Powerup, timeDelta) {
   for (const entity of entities) {
     const powerup = entity.get(Powerup)
-    console.log(powerup)
     powerup.timeLeft -= timeDelta
     if (powerup.timeLeft <= 0) {
       entity.remove(Powerup)
