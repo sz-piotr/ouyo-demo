@@ -5,6 +5,7 @@ import { shootBullets } from './systems/shootBullets'
 import { removeOOB } from './systems/removeOOB'
 import { spawnEnemies } from './systems/spawnEnemies'
 import { damageEnemies } from './systems/damageEnemies'
+import { damagePlayer } from './systems/damagePlayer'
 import { spawnPowerups } from './systems/spawnPowerups'
 import { drainPowerups } from './systems/drainPowerups'
 import { consumePowerups } from './systems/consumePowerups'
@@ -26,6 +27,7 @@ game.registerSystems([
   removeOOB,
   spawnEnemies,
   damageEnemies,
+  damagePlayer,
   spawnPowerups,
   drainPowerups,
   consumePowerups,

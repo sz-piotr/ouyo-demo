@@ -1,5 +1,5 @@
 import { Query } from 'ouyo'
-import { Transform, Sprite, Rotation } from '../components'
+import { Transform, Sprite, Rotation, Invincible } from '../components'
 import { ctx } from '../canvas'
 
 export const renderSprite = {
@@ -7,6 +7,10 @@ export const renderSprite = {
   processEntity (entity) {
     const transform = entity.get(Transform)
     const sprite = entity.get(Sprite)
+
+    if (skipInvincible(entity)) {
+      return
+    }
 
     if (entity.has(Rotation)) {
       const { angle } = entity.get(Rotation)
@@ -19,6 +23,16 @@ export const renderSprite = {
       )
     }
   }
+}
+
+function skipInvincible (entity) {
+  if (entity.has(Invincible)) {
+    const { timeLeft } = entity.get(Invincible)
+    if (timeLeft % 0.3 > 0.15) {
+      return true
+    }
+  }
+  return false
 }
 
 function drawRotated (ctx, transform, sprite, angle) {

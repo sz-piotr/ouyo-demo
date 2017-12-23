@@ -1,14 +1,16 @@
 import { Query } from 'ouyo'
-import { DoubleDamage, ThreeWay } from '../components'
+import { DoubleDamage, ThreeWay, Invincible } from '../components'
 
 export const drainPowerups = {
   query: [
     new Query(DoubleDamage),
-    new Query(ThreeWay)
+    new Query(ThreeWay),
+    new Query(Invincible)
   ],
-  process ([dd, tw], event, game) {
+  process ([dd, tw, inv], event, game) {
     drain(dd, DoubleDamage, event.timeDelta)
     drain(tw, ThreeWay, event.timeDelta)
+    drain(inv, Invincible, event.timeDelta)
   }
 }
 
