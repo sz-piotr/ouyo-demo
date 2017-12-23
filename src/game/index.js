@@ -5,6 +5,7 @@ import { shootBullets } from './systems/shootBullets'
 import { removeOOB } from './systems/removeOOB'
 import { spawnEnemies } from './systems/spawnEnemies'
 import { damageEnemies } from './systems/damageEnemies'
+import { spawnPowerups } from './systems/spawnPowerups'
 import { clearScreen } from './systems/clearScreen'
 import { renderColor } from './systems/renderColor'
 import { renderSprite } from './systems/renderSprite'
@@ -23,6 +24,7 @@ game.registerSystems([
   removeOOB,
   spawnEnemies,
   damageEnemies,
+  spawnPowerups,
   clearScreen,
   renderColor,
   renderSprite
