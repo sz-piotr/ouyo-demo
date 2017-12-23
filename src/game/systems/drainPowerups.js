@@ -6,7 +6,7 @@ export const drainPowerups = {
     new Query(DoubleDamage),
     new Query(ThreeWay)
   ],
-  process ([t, dd, tw], event, game) {
+  process ([dd, tw], event, game) {
     drain(dd, DoubleDamage, event.timeDelta)
     drain(tw, ThreeWay, event.timeDelta)
   }
