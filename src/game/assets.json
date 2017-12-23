@@ -1,4 +1,9 @@
 [
   "player.png",
-  "bullet.png"
+  "bullet.png",
+  "bullet-dd.png",
+  "powerup-dd.png",
+  "powerup-tw.png",
+  "enemy-1.png",
+  "enemy-2.png"
 ]

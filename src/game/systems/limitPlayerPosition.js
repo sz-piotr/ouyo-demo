@@ -6,10 +6,11 @@ export const limitPlayerPosition = {
   query: new Query(Player, Transform),
   processEntity (entity, event, game) {
     const transform = entity.get(Transform)
-    if (transform.x < 50) {
-      transform.x = 50
-    } else if (transform.x > WIDTH - 50) {
-      transform.x = WIDTH - 50
+    const radius = transform.size / 2
+    if (transform.x < radius) {
+      transform.x = radius
+    } else if (transform.x > WIDTH - radius) {
+      transform.x = WIDTH - radius
     }
   }
 }

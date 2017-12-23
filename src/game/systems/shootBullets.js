@@ -1,7 +1,8 @@
 import { Query } from 'ouyo'
 import {
   Cannon,
-  Transform
+  Transform,
+  DoubleDamage
 } from '../components'
 import { bullet } from '../assemblages/bullet'
 
@@ -10,11 +11,16 @@ export const shootBullets = {
   processEntity (entity, event, game) {
     const cannon = entity.get(Cannon)
     const transform = entity.get(Transform)
+    const hasDoubleDamage = entity.has(DoubleDamage)
 
     cannon.timeLeft -= event.timeDelta
     if (cannon.timeLeft <= 0) {
       cannon.timeLeft = cannon.interval + cannon.timeLeft
-      game.createEntity(bullet(transform, cannon.bulletSpeed))
+      game.createEntity(bullet(
+        transform,
+        cannon.bulletSpeed,
+        hasDoubleDamage
+      ))
     }
   }
 }

@@ -2,6 +2,8 @@ import { Query } from 'ouyo'
 import { Transform } from '../components'
 import { WIDTH, HEIGHT } from '../canvas'
 
+const TOLERATION = 200
+
 export const removeOOB = {
   query: new Query(Transform),
   processEntity (entity, event, game) {
@@ -14,9 +16,9 @@ export const removeOOB = {
 
 function isInBounds (transform) {
   return (
-    transform.x + transform.size > 0 &&
-    transform.x - transform.size < WIDTH &&
-    transform.y + transform.size > 0 &&
-    transform.y - transform.size < HEIGHT
+    transform.x + transform.size > -TOLERATION &&
+    transform.x - transform.size < WIDTH + TOLERATION &&
+    transform.y + transform.size > -TOLERATION &&
+    transform.y - transform.size < HEIGHT + TOLERATION
   )
 }
