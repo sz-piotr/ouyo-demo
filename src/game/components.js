@@ -19,3 +19,4 @@ export const ThreeWay = game.createComponent('timeLeft')
 
 export const Color = game.createComponent('value')
 export const Sprite = game.createComponent('image', 'width', 'height')
+export const Rotation = game.createComponent('angle')

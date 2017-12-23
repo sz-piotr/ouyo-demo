@@ -1,14 +1,11 @@
 import { powerup } from '../assemblages/powerup'
 
-let INTERVAL = 1
-let timeToPowerup = INTERVAL
+const POWERUP_CHANCE = 0.3
 
 export const spawnPowerups = {
   on: 'enemykilled',
   process (entities, event, game) {
-    timeToPowerup -= event.timeDelta
-    if (timeToPowerup <= 0) {
-      timeToPowerup += INTERVAL
+    if (Math.random() < POWERUP_CHANCE) {
       game.createEntity(powerup(event.x, event.y))
     }
   }

@@ -1,14 +1,16 @@
 import {
   Transform,
   Velocity,
-  DamagesEnemies
+  DamagesEnemies,
+  Rotation
 } from '../components'
 import { getSprite } from '../loader'
 
-export function bullet (transform, speed, hasDoubleDamage) {
+export function bullet (transform, velocity, hasDoubleDamage) {
   return entity => entity
     .add(new Transform(transform.x, transform.y - transform.size + 10, 10))
-    .add(new Velocity(0, -speed))
+    .add(new Velocity(velocity.x, velocity.y))
     .add(new DamagesEnemies(hasDoubleDamage ? 2 : 1))
     .add(getSprite(hasDoubleDamage ? 'bullet-dd.png' : 'bullet.png'))
+    .add(new Rotation(velocity.angle))
 }
