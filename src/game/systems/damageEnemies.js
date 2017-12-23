@@ -12,8 +12,13 @@ export const damageEnemies = {
       for (const bullet of bullets) {
         const bulletTransform = bullet.get(Transform)
         if (collide(enemyTransform, bulletTransform)) {
-          game.removeEntity(enemy)
+          const { damage } = bullet.get(DamagesEnemies)
           game.removeEntity(bullet)
+          const enemyComponent = enemy.get(Enemy)
+          enemyComponent.health -= damage
+          if (enemyComponent.health <= 0) {
+            game.removeEntity(enemy)
+          }
           break
         }
       }

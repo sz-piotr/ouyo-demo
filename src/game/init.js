@@ -15,5 +15,5 @@ export function init (game) {
     .add(new Player())
     .add(getSprite('player.png'))
     .add(new Cannon(0.2, 0, 450))
-    .add(new DoubleDamage())
+    // .add(new DoubleDamage())
 }
