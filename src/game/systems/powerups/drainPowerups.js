@@ -1,5 +1,5 @@
 import { Query } from 'ouyo'
-import { DoubleDamage, ThreeWay, Invincible } from '../components'
+import { DoubleDamage, ThreeWay, Invincible } from '../../components'
 
 export const drainPowerups = {
   query: [

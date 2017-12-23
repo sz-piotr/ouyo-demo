@@ -1,4 +1,4 @@
-import { enemy } from '../assemblages/enemy'
+import { enemy } from '../../assemblages/enemy'
 
 let interval = 3
 let remainingTime = 1

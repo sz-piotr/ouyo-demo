@@ -1,6 +1,6 @@
 import { Query } from 'ouyo'
-import { Transform, Enemy, Player, Invincible } from '../components'
-import { collide } from '../collision'
+import { Transform, Enemy, Player, Invincible } from '../../components'
+import { collide } from '../../collision'
 
 export const damagePlayer = {
   query: [

@@ -10,6 +10,6 @@ export const drawScore = {
     ctx.fillStyle = 'white'
     ctx.font = 'bold 32px monospace'
     ctx.textAlign = 'left'
-    ctx.fillText(entity.get(Score).points + 100000, 20, 40)
+    ctx.fillText(entity.get(Score).points, 20, 40)
   }
 }

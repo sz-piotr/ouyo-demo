@@ -1,4 +1,4 @@
-import { powerup } from '../assemblages/powerup'
+import { powerup } from '../../assemblages/powerup'
 
 const POWERUP_CHANCE = 0.3
 

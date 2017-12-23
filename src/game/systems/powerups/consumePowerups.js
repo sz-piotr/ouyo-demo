@@ -6,8 +6,8 @@ import {
   DoubleDamagePowerup,
   ThreeWay,
   ThreeWayPowerup
-} from '../components'
-import { collide } from '../collision'
+} from '../../components'
+import { collide } from '../../collision'
 
 const DURATION = 5
 
