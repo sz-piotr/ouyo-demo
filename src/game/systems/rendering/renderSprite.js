@@ -1,12 +1,13 @@
 import { Query } from 'ouyo'
 import { Transform, Sprite, Rotation, Invincible } from '../../components'
 import { ctx } from '../../canvas'
+import { sprites } from '../../loader'
 
 export const renderSprite = {
   query: new Query(Transform, Sprite),
   processEntity (entity) {
     const transform = entity.get(Transform)
-    const sprite = entity.get(Sprite)
+    const sprite = sprites[entity.get(Sprite).src]
 
     if (skipInvincible(entity)) {
       return

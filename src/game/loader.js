@@ -1,11 +1,9 @@
-import { Sprite } from './components'
-
-const sprites = {}
+export const sprites = {}
 
 export async function load (assets) {
   const resolved = await Promise.all(assets.map(getAsset))
   resolved.forEach(sprite => {
-    sprites[sprite.url] = () => new Sprite(sprite.image, sprite.width, sprite.height)
+    sprites[sprite.url] = sprite
   })
 }
 
@@ -21,8 +19,4 @@ function getAsset (url) {
     image.onerror = () => reject(url)
     image.src = url
   })
-}
-
-export function getSprite (url) {
-  return sprites[url]()
 }
